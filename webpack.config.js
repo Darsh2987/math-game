@@ -25,41 +25,12 @@ module.exports = {
       title: "index",
       template: "src/index.html",
     }),
-    new CopyPlugin({
-      patterns: [{ from: "src/assets/images", to: "assets/images" }],
-    }),
   ],
   module: {
     rules: [
       {
         test: /\.(s*)css$/i,
         use: [MiniCssExtractPlugin.loader, { loader: "css-loader" }, { loader: "sass-loader" }],
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "./assets/images",
-              publicPath: "assets/images",
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "./assets/fonts",
-              publicPath: "assets/fonts",
-            },
-          },
-        ],
       },
     ],
   },
