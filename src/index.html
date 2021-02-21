@@ -4,7 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet" />
     <title>Math Game</title>
   </head>
-  <body></body>
+
+  <body>
+    <!-- Main Ui -->
+    <div class="main-ui">
+      <!-- Math problem -->
+      <p id="problem" class="problem"></p>
+
+      <!-- Form - input field and submit button -->
+      <form id="form" class="form" action="">
+        <input id="input" class="input" type="text" autocomplete="off" />
+        <button class="submit" type="submit">Submit</button>
+      </form>
+
+      <!-- Points needed and mistakes allowed description -->
+      <p class="status">You need <span id="points-needed">10</span> more points, and are allowed to make <span id="mistakes-allowed">2</span> more mistakes</p>
+
+      <div class="notes">
+        <p>*Division problem's should be rounded to 1 decimal place - for example 0.3333333333333333 should be answered as 0.3</p>
+      </div>
+
+      <!-- Progress bar/boxes to show amount of correct answers -->
+      <div class="progress">
+        <div class="boxes">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div id="progress-inner" class="progress-inner"></div>
+      </div>
+    </div>
+
+    <!-- Overlay - win or lose message -->
+    <div class="overlay">
+      <div class="overlay-inner">
+        <p id="end-message" class="end-message"></p>
+        <button id="reset-button" class="reset-button">Start Over</button>
+      </div>
+    </div>
+  </body>
 </html>
