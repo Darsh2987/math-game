@@ -1,0 +1,79 @@
+/* Main Ui Rules */
+.main-ui {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.problem {
+  font-size: 6rem;
+  font-weight: 400;
+  margin: 2rem;
+  color: #fff;
+}
+
+.form {
+  margin: 2rem;
+}
+
+.input,
+.submit {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.submit {
+  margin-left: 0.5rem;
+  color: #600080;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  background-color: #fff;
+}
+
+.status {
+  font-size: 2rem;
+  margin: 2rem;
+}
+
+.notes p {
+  color: #fff;
+  margin: 2rem;
+}
+
+#points-needed {
+  color: #7ecc00;
+}
+
+#mistakes-allowed {
+  color: red;
+}
+
+.progress {
+  border: 1px solid #c7c7c7;
+  border-right: none;
+  position: relative;
+  margin: 0 2rem;
+}
+
+.progress-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #7ecc00;
+  opacity: 0.6;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: transform 0.5s ease-out;
+}
+
+.boxes {
+  display: flex;
+  width: 100%;
+}
+
+.box {
+  height: 40px;
+  border-right: 1px solid #c7c7c7;
+  flex: 1;
+}

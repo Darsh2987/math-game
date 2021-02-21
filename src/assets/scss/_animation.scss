@@ -1,0 +1,16 @@
+/* Animate Math Problem Text*/
+@keyframes showError {
+  50% {
+    color: red;
+    transform: scale(1.2);
+  }
+
+  100% {
+    color: #fff;
+    transform: scale(1);
+  }
+}
+
+.animate-wrong {
+  animation: 0.45s showError;
+}
